@@ -30,11 +30,12 @@ syn match qmakeEnvVariable /$$([A-Z_]\+)/
 syn match qmakeQtConfiguration /$$\[[A-Z_]\+\]/
 
 " Builtins
-" + contains
-" + CONFIG
-syn keyword qmakeBuiltin basename count dirname error exists
-syn keyword qmakeBuiltin find for include infile isEmpty join member message
-syn keyword qmakeBuiltin prompt quote sprintf system unique warning
+"syn keyword qmakeBuiltin basename count dirname error exists
+"syn keyword qmakeBuiltin find for join member message
+"syn keyword qmakeBuiltin prompt quote sprintf system unique warning
+
+" Test functions
+syn match qmakeTestFunctions /\(cache\|CONFIG\|include\|error\|eval\|exists\|export\|if\|isEmpty\|load\|log\|message\|mkpath\|requires\|system\|unset\|warning\|contains\|count\|debug\|equals\|greaterThan\|for\|lessThan\|touch\|defined\|files\|infile\|write_file\|packagesExist\|prepareRecursiveTarget\|qtCompileTest\|qtHaveModule\)\((.*)\)\@=/
 
 " Scopes
 syn match qmakeScope /[0-9A-Za-z_-]\+\(|\|:\)/he=e-1
@@ -43,6 +44,7 @@ syn match qmakeScope /[0-9A-Za-z_-]\+\s*{/he=e-1
 hi def link qmakeComment Comment
 hi def link qmakeVariable Identifier
 hi def link qmakeBuiltin Function
+hi def link qmakeTestFunctions Function
 hi def link qmakeValue PreProc
 hi def link qmakeEnvVariable PreProc
 hi def link qmakeQtConfiguration PreProc
