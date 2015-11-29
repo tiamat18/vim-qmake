@@ -38,7 +38,9 @@ syn match qmakeQtConfiguration /$$\[[A-Z_]\+\]/
 syn match qmakeTestFunctions /\(cache\|CONFIG\|include\|error\|eval\|exists\|export\|if\|isEmpty\|load\|log\|message\|mkpath\|requires\|system\|unset\|warning\|contains\|count\|debug\|equals\|greaterThan\|for\|lessThan\|touch\|defined\|files\|infile\|write_file\|packagesExist\|prepareRecursiveTarget\|qtCompileTest\|qtHaveModule\)\((.*)\)\@=/
 
 " Scopes
-syn match qmakeScope /[0-9A-Za-z_-]\+\(|\|:\)/he=e-1
+syn match qmakeScope /[0-9A-Za-z_-]\+:/he=e-1
+syn match qmakeScope /[0-9A-Za-z_-]\+|\@=/
+syn match qmakeScope /|\@<=[0-9A-Za-z_-]\+/
 syn match qmakeScope /[0-9A-Za-z_-]\+\s*{/he=e-1
 
 hi def link qmakeComment Comment
