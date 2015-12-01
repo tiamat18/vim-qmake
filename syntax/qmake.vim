@@ -45,8 +45,8 @@ syn match qmakeScope /[0-9A-Za-z_-]\+\s*{/he=e-1
 
 hi def link qmakeComment Comment
 hi def link qmakeVariable Identifier
-hi def link qmakeBuiltin Function
-hi def link qmakeTestFunctions Function
+hi def link qmakeBuiltin Macro
+hi def link qmakeTestFunctions Macro
 hi def link qmakeValue PreProc
 hi def link qmakeEnvVariable PreProc
 hi def link qmakeQtConfiguration PreProc
