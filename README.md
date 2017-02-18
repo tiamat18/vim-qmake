@@ -1,6 +1,10 @@
 Qt project file syntax plugin for Vim
 ------
-Forked from [artoj/qmake-syntax-vim](https://github.com/artoj/qmake-syntax-vim)
+Forked from [askbriar/vim-qmake](https://github.com/arkbriar/vim-qmake),
+which was itself a fork of 
+[artoj/qmake-syntax-vim](https://github.com/artoj/qmake-syntax-vim)
+
+Copyright (C) 2017 tiamat18 <tiamatX18@gmail.com>
 
 Copyright (C) 2015-2016 ArkBriar <arkbriar@gmail.com>
 
