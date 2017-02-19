@@ -62,6 +62,10 @@ syn keyword qmakeFuncReturn return nextgroup=qmakeFuncReturnArgs
 syn region qmakeFuncReturnArgs matchgroup=none start=/\s*(/ skip='\\$' end=/)\|$/ contained contains=@qmakeData
 
 
+" Function arguments
+syn region qmakeFuncArgs start=/(/ skip=/\\$/ excludenl end=/)\|$/ contains=@qmakeData
+
+
 " Built-in variables (as of Qt 5.8)
 let s:builtInVars = [ 'CONFIG', 'DEFINES', 'DEF_FILE', 'DEPENDPATH', 'DEPLOYMENT_PLUGIN', 'DESTDIR', 'DISTFILES', 
                     \ 'DLLDESTDIR', 'FORMS', 'GUID', 'HEADERS', 'ICON', 'IDLSOURCES', 'INCLUDEPATH', 'INSTALLS', 'LEXIMPLS', 
