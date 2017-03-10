@@ -28,7 +28,7 @@ syn match qmakeVarDecl /\(\i\|\.\)\+\s*=/he=e-1 contains=qmakeBuiltinVarName nex
 syn match qmakeVarDecl /\(\i\|\.\)\+\s*\(+\|-\||\|*\|\~\)=/he=e-2 contains=qmakeBuiltinVarName nextgroup=qmakeVarAssign
 
 " QMake variable assignments
-syn region qmakeVarAssign start=/\s*[^[:space:]}]/ skip=/\\$/ end=/\(\ze}\|$\)/ contained contains=@qmakeData
+syn region qmakeVarAssign start=/\s*\ze[^[:space:]}]/ skip=/\\$/ end=/\(\ze}\|$\)/ contained contains=@qmakeData
 
 
 " QMake variable values / macro expansions
